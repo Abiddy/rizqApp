@@ -16,9 +16,7 @@ const Onboarding = () => {
   const [displayName, setDisplayName] = useState('');
   const [profilePicture, setProfilePicture] = useState('');
   const [description, setDescription] = useState('');
-  const [languages, setLanguages] = useState([]);
   const [occupation, setOccupation] = useState('');
-  const [skills, setSkills] = useState([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,9 +25,9 @@ const Onboarding = () => {
       displayName,
       profilePicture,
       description,
-      languages,
+
       occupation,
-      skills
+    
     });
   };
 
@@ -128,7 +126,7 @@ const Onboarding = () => {
               <label className="block text-gray-700 mb-2">Languages*</label>
               <input 
                 type="text" 
-                value={languages}
+            
                
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required 
@@ -150,7 +148,7 @@ const Onboarding = () => {
               <label className="block text-gray-700 mb-2">Skills*</label>
               <input 
                 type="text" 
-                value={skills}
+         
              
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required 
