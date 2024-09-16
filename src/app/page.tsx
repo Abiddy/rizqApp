@@ -10,7 +10,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SignInButton, SignedIn, SignedOut } from '@clerk/nextjs';
-import Navbar from "./components/Navbar";
 import Link from "next/link";
 
 export default function Home() {
