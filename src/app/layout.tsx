@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import {
   ClerkProvider,
+  SignedIn,
 } from '@clerk/nextjs'
 import './globals.css'
 import Navbar from "./components/Navbar";
@@ -22,7 +23,9 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className={GeistSans.className}>
         <body>
-          <Navbar />
+        <SignedIn> 
+      <Navbar />
+      </SignedIn>
           {children}
         </body>
       </html>

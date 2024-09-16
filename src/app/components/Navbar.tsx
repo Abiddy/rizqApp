@@ -8,16 +8,14 @@ const Navbar = () => {
       {/* Logo on the left */}
       <div className="flex items-center justify-between">
         <Link href="/">
-          <img src="/rizqlogo.png" alt="Logo" className="h-10" />
+          <img src="/rizqlogo2.png" alt="Logo" className="h-9" />
         </Link>
 
         {/* Right-side login button */}
         <div className="flex items-center space-x-4">
           {/* Become a Seller Button */}
           <Link href="/onboarding">
-
               Dashboard
-       
           </Link>
           <SignedOut>
             <SignInButton />
