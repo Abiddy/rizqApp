@@ -60,7 +60,7 @@ export default function Home() {
   
       
   <div className="relative flex flex-col items-center justify-center h-screen text-center bg-blue-500 px-4 overflow-hidden">
-  <img src="/topImage.png" alt="Image 1" className="mb-20 object-cover" />
+  <img src="/landingImage.png" alt="Image 1" className="mb-20 object-cover" />
     <img src="/rizqlogo2.png" alt="Rizq Logo" className="w-24 h-24 mb-3 z-10" />
     <h1 className="text-2xl font-bold text-white z-10">Rizq</h1>
     <p className="text-gray-100 text-s mt-2 pl-5 pr-5">
