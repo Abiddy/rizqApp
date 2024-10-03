@@ -11,10 +11,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SignInButton, SignedIn, SignedOut } from '@clerk/nextjs';
 import Link from "next/link";
+import { FAQAccordion } from "./components/FAQ";
+import ContextSection from "./components/ContextSection";
+import CardsSection from "./components/CardsSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <div>
+              <style jsx>{`
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+        `}</style>
       {/* Show the content when the user is signed in */}
       <SignedIn>
       
@@ -56,25 +63,61 @@ export default function Home() {
 
       {/* Show a different message when the user is signed out */}
       <SignedOut>
-   
-  
-      
-  <div className="relative flex flex-col items-center justify-center h-screen text-center bg-blue-500 px-4 overflow-hidden">
-  <img src="/landingImage.png" alt="Image 1" className="mb-20 object-cover" />
-    <img src="/rizqlogo2.png" alt="Rizq Logo" className="w-24 h-24 mb-3 z-10" />
-    <h1 className="text-2xl font-bold text-white z-10">Rizq</h1>
-    <p className="text-gray-100 text-s mt-2 pl-5 pr-5">
-      Join the first muslim centric freelancing marketplace!
-    </p>
-    <div className="bg-white text-blue-500 font-semibold px-6 py-2 mt-6 rounded-md hover:bg-gray-100 transition-colors duration-300 z-10">
-      <SignInButton>Sign Up</SignInButton>
+      <div   style={{
+    borderBottomLeftRadius: '70% 10%',
+    borderBottomRightRadius: '70% 10%',
+  }} className=" flex flex-col justify-between text-center px-2 overflow-hidden bg-blue-500">
+  {/* Transparent Navbar */}
+  <div className="flex items-center justify-between p-5 bg-transparent z-10">
+    <img src="/rizqlogo2.png" alt="Rizq Logo" className="w-14 h-14" />
+    <button className="px-4 py-2 bg-white text-blue-500 rounded-full">
+      Survey
+    </button>
+  </div>
+
+  {/* Introducing Rizq */}
+  <p style={{ fontFamily: 'DM Sans, sans-serif' }} className="text-white text-xl mt-12">
+    Introducing <span className="font-bold">Rizq</span>
+  </p>
+
+  {/* Title Section */}
+  <h1 style={{ fontFamily: 'DM Sans, sans-serif' }} className="text-white text-5xl font-light mt-6 z-10">
+    The Freelancing <br /> platform for <br /> your community
+  </h1>
+
+  {/* Description Paragraph */}
+  <div className="mt-10 flex flex-col items-center justify-center mb-30">
+  <p
+    style={{ fontFamily: 'DM Sans, sans-serif' , maxWidth: '20rem'}}
+    className=" p-5 mb-5 text-white text-base font-light px-4 py-2 rounded-3xl z-20"
+  >
+    Connecting <span className="font-bold">you</span> to muslim   <span className="font-bold">freelancers</span> / <span className="font-bold">refugees</span> / <span className="font-bold">immigrants</span> / <span className="font-bold">handymen</span> inside your community, one gig at a time!
+  </p>
+
+  {/* Image Section */}
+
+    <div className="relative w-80 h-80 mb-20">
+      <img
+        src="/l2.jpg"
+        alt="Freelancing Image"
+        className="w-full h-full rounded-3xl object-cover z-10"
+      />
     </div>
   </div>
-</SignedOut>
 
-
-
-
+  </div>
+  <div  className="mt-20 text-center bg-white text-black rounded-lg">
+  <ContextSection/>
+  <div className="mt-20 mb-20">
+  <CardsSection/>
+  </div>
+  <div className="p-10">    
+    <FAQAccordion/>
     </div>
+    <Footer/>
+  </div>
+
+</SignedOut>
+</div>
   );
 }
