@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SignInButton, SignedIn, SignedOut } from '@clerk/nextjs';
+import { SignedIn, SignedOut } from '@clerk/nextjs';
 import Link from "next/link";
 import { FAQAccordion } from "./components/FAQ";
 import ContextSection from "./components/ContextSection";
