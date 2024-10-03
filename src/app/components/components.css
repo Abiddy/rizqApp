@@ -1,0 +1,23 @@
+/* Keyframes to move images to the right */
+@keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .image-container {
+    animation: moveLeft 20s linear infinite; /* 20s for slow movement */
+    display: flex;
+  }
+  
+  .hover-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-image:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+  }
+  
