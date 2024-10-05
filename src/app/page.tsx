@@ -70,9 +70,14 @@ export default function Home() {
   {/* Transparent Navbar */}
   <div className="flex items-center justify-between p-5 bg-transparent z-10">
     <img src="/rizqlogo2.png" alt="Rizq Logo" className="w-14 h-14" />
-    <button className="px-4 py-2 bg-white text-blue-500 rounded-full">
-      Survey
-    </button>
+    <a 
+  href="https://docs.google.com/forms/d/e/1FAIpQLSd3j9iVnasvMM6bLaFYsw5ypebcnyjZFbqqyXSzpn02Q3BAhQ/viewform?fbzx=1084646058636914488" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="px-4 py-2 bg-white text-blue-500 rounded-full"
+>
+  Survey
+</a>
   </div>
 
   {/* Introducing Rizq */}
