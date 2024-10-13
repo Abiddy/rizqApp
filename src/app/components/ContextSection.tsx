@@ -4,7 +4,7 @@ export default function ContextSection() {
   return (
 <div
   style={{
-    fontFamily: 'DM Sans, sans-serif',
+     fontFamily: 'DM Sans, sans-serif',
     paddingLeft: '50px',
     paddingRight: '50px',
     maxWidth: '800px',

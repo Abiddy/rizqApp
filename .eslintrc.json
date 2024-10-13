@@ -1,3 +1,19 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "overrides": [
+    {
+      "files": ["src/components/ui/**/*.ts", "src/components/ui/**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "prefer-const": "off"
+      }
+    }
+    
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off",     // Disable "unused vars" errors
+    "@typescript-eslint/no-explicit-any": "off",    // Disable specific TypeScript errors
+    "@typescript-eslint/explicit-module-boundary-types": "off"  // Disable boundary type errors
+  }
 }

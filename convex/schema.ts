@@ -3,6 +3,7 @@ import { v } from "convex/values"; // Import v for defining value types
 
 export default defineSchema({
   onboarding: defineTable({
+    userId: v.string(),
     fullname: v.string(),
     username: v.string(),
     email: v.string(),

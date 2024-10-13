@@ -15,8 +15,8 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as insertOnboarding from "../insertOnboarding.js";
 import type * as onboarding from "../onboarding.js";
+import type * as submitOnboardingData from "../submitOnboardingData.js";
 import type * as users from "../users.js";
 
 /**
@@ -28,8 +28,8 @@ import type * as users from "../users.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  insertOnboarding: typeof insertOnboarding;
   onboarding: typeof onboarding;
+  submitOnboardingData: typeof submitOnboardingData;
   users: typeof users;
 }>;
 export declare const api: FilterApi<

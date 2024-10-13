@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-      <footer style={{ fontFamily: 'DM Sans, sans-serif' }} className="bg-gray-900 text-white py-8 px-6">
+      <footer style={{ fontFamily: 'DM Sans, sans-serif' }} className="bg-gray-900 text-white py-8 px-6 z-10">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* About Section */}
           <div>

@@ -1,75 +1,31 @@
-// onboarding/layout.tsx
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
+
 import React from "react";
+import { ProfileForm } from "./profile-form"; // Import the ProfileForm component
+import { SignedIn } from "@clerk/nextjs";
 
-// interface OnboardingLayoutProps {
-//   children: React.ReactNode;
-//   currentStep: number;
-// }
-
-const steps = [
-  { label: "Personal Info", path: "/onboarding/personal-info" },
-  { label: "Professional Info", path: "/onboarding/professional-info" },
-];
-
-const currentStep = 1
-
-export default function OnboardingLayout({  children,
-}: {
-  children: React.ReactNode}) {
+export default function OnboardingLayout() {
   return (
     <>
-      <div className="md:hidden">
-        <Image
-          src="/examples/forms-light.png"
-          width={1280}
-          height={791}
-          alt="Forms"
-          className="block dark:hidden"
-        />
-        <Image
-          src="/examples/forms-dark.png"
-          width={1280}
-          height={791}
-          alt="Forms"
-          className="hidden dark:block"
-        />
+       <SignedIn> 
+      <div className="">
       </div>
-      <div className="hidden space-y-6 p-10 pb-16 md:block">
-        <div className="space-y-0.5">
-          <h2 className="text-2xl font-bold tracking-tight">Create a Rizq Seller Profile</h2>
-          <p className="text-muted-foreground">
-            Manage your account settings and set e-mail preferences.
-          </p>
-        </div>
-        <Separator className="my-6" />
+      <div className="space-y-6 p-4 md:p-10 pb-16">
+  <div className="space-y-0.5 p-5">
+    <h2 className="text-3xl font-light tracking-tight">Become a Rizq Seller</h2>
+    <p className="text-muted-foreground text-light pt-3">
+      Tell us about yourself and what you bring to the table!
+    </p>
+  </div>
 
-        {/* Breadcrumb */}
-        <Breadcrumb>
-          <BreadcrumbList>
-            {steps.map((step, index) => (
-              <React.Fragment key={step.label}>
-                <BreadcrumbItem>
-                  {currentStep === index + 1 ? (
-                    <BreadcrumbPage>{step.label}</BreadcrumbPage>
-                  ) : (
-                    <BreadcrumbLink href={step.path}>{step.label}</BreadcrumbLink>
-                  )}
-                </BreadcrumbItem>
-                {index < steps.length - 1 && <BreadcrumbSeparator />} {/* Separator between items */}
-              </React.Fragment>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
 
-        <Separator className="my-6" />
+  <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
+    <div className="flex-1 lg:max-w-2xl">
+      <ProfileForm /> 
+    </div>
+  </div>
+</div>
+</SignedIn> 
 
-        <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-          <div className="flex-1 lg:max-w-2xl">{children}</div>
-        </div>
-      </div>
     </>
   );
 }
